@@ -450,9 +450,9 @@ header {
 }
 
 .ceo-info .right img {
-  margin-top: -10;
+  margin-top: -10px;
   margin-bottom: -114px;
-  max-width: 10000px;
+  max-width: unset;
 }
 
 .ceo-info .left {
