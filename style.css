@@ -1,6 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+
+  /* -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; */
 }
 
 body,
@@ -19,6 +23,10 @@ html {
 
 .background-blue {
   background-color: #eaf1fe;
+}
+
+.background-white {
+  background-color: white;
 }
 
 .background-gradient {
@@ -79,22 +87,35 @@ header {
   border-width: 0px;
 }
 
-.login-menu div {
+.login-menu .login-button {
+  padding: 18px 25px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e54d8;
+
   margin-top: -6px;
-  width: 225px;
-  height: 55px;
+  /* width: 225px;
+  height: 55px; */
 
   border-width: 0;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
 
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #3e54d8;
+  display: inline-flex;
+  /* grid-auto-flow: column; */
+  gap: 10px;
 
-  vertical-align: middle;
+  align-items: center;
+}
+
+.login-button-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
 }
 
 .header {
@@ -140,14 +161,15 @@ header {
   left: 0%;
 }
 
-.header .left .blue {
+.blue-text {
   color: #3e54d8;
+  font-weight: bold;
 }
 
 .try-30days-trial {
+  align-items: center;
   font-family: "Montserrat", sans-serif;
-  height: 80px;
-  width: 421px;
+  padding: 29px 52px;
   margin-bottom: 100px;
   background-color: #3e54d8;
   border-radius: 8px;
@@ -183,13 +205,32 @@ header {
   text-align: center;
 }
 
+.top {
+  padding-top: 100px;
+}
+
+.mid {
+  padding-top: 50px;
+}
+
 .article-main > h1 {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  max-width: 874px;
+  /* padding-top: 40px; */
+  margin: 0px auto 40px auto;
+
+  font-size: 50px;
+  line-height: 75px;
 }
 
 .article-main > p {
-  margin-bottom: 60px;
+  max-width: 772px;
+  margin: 0px auto 50px auto;
+
+  text-align: left;
+  font-size: 20px;
+  line-height: 32px;
+
+  font-weight: 500;
 }
 
 .card-vertical {
@@ -221,8 +262,22 @@ header {
 }
 
 .card-vertical > h1 {
-  text-align: center;
+  text-align: left;
+  margin-top: 40px;
   margin-bottom: 24px;
+  font-weight: 700;
+  line-height: 36.57px;
+}
+
+.card-vertical > p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400px;
+}
+
+.card-vertical > p b {
+  font-weight: 600;
 }
 
 .card-vertical > img {
@@ -232,6 +287,7 @@ header {
 }
 
 .cards {
+  margin-top: 60px;
   display: flex;
 }
 
@@ -240,18 +296,58 @@ header {
   height: 382px; 
 } */
 
+.cards-horisontal {
+  padding-top: 50px;
+}
+
+.cards-horisontal > div:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.cards-horisontal > div:last-child {
+  padding-bottom: 181px;
+}
+
 .cards-horisontal .text {
   text-align: left;
-  margin: auto 0 auto;
+  margin: auto;
+}
+
+.cards-horisontal .text h1 {
+  font-size: 30px;
+  line-height: 36.57px;
+  font-weight: 700;
+
+  margin-bottom: 24px;
+}
+
+.cards-horisontal .text p {
+  font-size: 18px;
+  line-height: 28.8px;
+  font-weight: 400px;
+}
+
+.cards-horisontal .text p b {
+  font-weight: 600;
 }
 
 .card-right {
   display: flex;
   flex-direction: row-reverse;
+  gap: 24px;
+}
+
+.card-right .text {
+  margin-right: 16px;
 }
 
 .card-left {
   display: flex;
+  gap: 24px;
+}
+
+.card-left .text {
+  margin-left: 16px;
 }
 
 .card-right .img {
@@ -270,4 +366,65 @@ header {
   margin-left: -74px;
   margin-right: -74px;
   margin-top: -42px;
+}
+
+.cards-min {
+  margin-top: 35px;
+  display: flex;
+  gap: 59px;
+}
+
+.cards-min .white-plain {
+  width: 248px;
+  height: 230px;
+  border-radius: 36px;
+  box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-min .text {
+  text-align: left;
+}
+
+.cards-min .mid-text {
+  height: 114px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cards-min .text h1 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.cards-min .text p {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.cards-min .card-min-vertical:first-child p {
+  position: absolute;
+  width: 264px;
+}
+
+.h1text {
+  text-align: center;
+}
+
+.h1text h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.h1text .try-30days-trial {
+  margin-bottom: 100px;
+}
+
+.ceo-info {
+  display: flex;
 }
