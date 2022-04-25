@@ -93,6 +93,7 @@ header {
 }
 
 .login-menu .login-button {
+  cursor: pointer;
   padding: 18px 25px;
 
   font-family: inherit;
@@ -188,6 +189,8 @@ header {
   font-weight: 600;
 
   box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+
+  cursor: pointer;
 }
 
 .try-30days-trial:hover {
@@ -490,6 +493,7 @@ header {
   gap: 19px;
 
   box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
+  cursor: pointer;
 }
 
 footer .logo img {
@@ -548,12 +552,19 @@ footer .ip {
   color: #929398;
 }
 
+footer .logo,
 footer .email {
-  margin: auto 0;
+  margin-bottom: 50px;
 }
 
-footer .logo {
-  margin-bottom: 50px;
+footer .email {
+  display: flex;
+  align-items: center;
+}
+
+footer .email > div {
+  display: grid;
+  gap: 6px;
 }
 
 footer .ip {
@@ -570,6 +581,7 @@ footer .links-right {
 
 .link-hover {
   text-decoration: none;
+  color: #3e54d8;
 }
 
 .link-hover:hover {
@@ -585,4 +597,8 @@ footer .links-right {
   background-color: #3e54d8;
   color: white;
   fill: white;
+}
+
+img {
+  max-width: 100%;
 }
