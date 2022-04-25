@@ -69,6 +69,11 @@ header {
   font-weight: 500;
   color: #24252e;
   text-decoration: none;
+  transition: 300ms;
+}
+
+.header-links li a:hover {
+  color: #3e54d8;
 }
 
 .language select {
@@ -164,6 +169,7 @@ header {
 .blue-text {
   color: #3e54d8;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .try-30days-trial {
@@ -175,11 +181,17 @@ header {
   border-radius: 8px;
   border-width: 0;
 
+  transition: 300ms;
+
   color: white;
   font-size: 18px;
   font-weight: 600;
 
   box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+}
+
+.try-30days-trial:hover {
+  background-color: #1b2d9d;
 }
 
 .header .right {
@@ -235,15 +247,15 @@ header {
 
 .card-vertical {
   max-width: 374px;
-  margin-right: 24px;
   margin-bottom: 101px;
 }
 
 .plain-white {
   position: relative;
   background-color: #ffffff;
-  height: 358px;
-  width: 374px;
+  /* height: 358px;
+  width: 374px; */
+  padding: 50% 0;
   border-radius: 36px;
   box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
 }
@@ -255,10 +267,6 @@ header {
   top: 0;
   bottom: 0;
   right: 0;
-}
-
-.card-vertical:last-child {
-  margin-right: 0px;
 }
 
 .card-vertical > h1 {
@@ -289,6 +297,7 @@ header {
 .cards {
   margin-top: 60px;
   display: flex;
+  gap: 24px;
 }
 
 /* .cards-horisontal .img {
@@ -374,9 +383,15 @@ header {
   gap: 59px;
 }
 
+.cards-min .card-min-vertical {
+  max-width: 248px;
+}
+
 .cards-min .white-plain {
-  width: 248px;
-  height: 230px;
+  border: 1px solid #e5eeff;
+  width: 246px;
+  height: 248px;
+  /* padding: 25% 0; */
   border-radius: 36px;
   box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.12);
 
@@ -427,4 +442,147 @@ header {
 
 .ceo-info {
   display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.ceo-info .right img {
+  margin-top: -10;
+  margin-bottom: -114px;
+}
+
+.ceo-info .left {
+  margin-right: 82px;
+  display: flex;
+  align-items: center;
+}
+
+.ceo-info .left h1 {
+  font-size: 48px;
+  line-height: 62.4px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.ceo-info .left p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 52px;
+}
+
+.ceo-info .left button {
+  padding: 22px 28px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 600;
+  color: #3e54d8;
+
+  transition: 300ms;
+
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 19px;
+
+  box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
+}
+
+footer .logo img {
+  width: 253px;
+}
+
+footer {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+footer .email a {
+  text-decoration: none;
+  color: #3e54d8;
+  font-weight: 600;
+}
+
+footer .prava a {
+  text-decoration: none;
+  color: #3e54d8;
+}
+
+footer .linka {
+  font-weight: 500;
+  text-decoration: none;
+  color: #3e54d8;
+}
+
+/* footer .logo-email {
+  display: flex;
+}
+
+footer .info {
+  display: flex;
+}
+
+footer .links-politics {
+  display: flex;
+} */
+
+footer .main-foot {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-areas:
+    "1 1"
+    "2 2"
+    "3 3";
+
+  grid-template-columns: 43% 57%;
+}
+
+footer .prava,
+footer .ip {
+  color: #929398;
+}
+
+footer .email {
+  margin: auto 0;
+}
+
+footer .logo {
+  margin-bottom: 50px;
+}
+
+footer .ip {
+  margin-bottom: 16px;
+}
+
+footer .links-left br {
+  margin-bottom: 16px;
+}
+
+footer .links-right {
+  margin-top: auto;
+}
+
+.link-hover {
+  text-decoration: none;
+}
+
+.link-hover:hover {
+  text-decoration: underline;
+}
+
+.link-hover:visited {
+  text-decoration: none;
+  color: #3e54d8;
+}
+
+.ceo-info .left button:hover {
+  background-color: #3e54d8;
+  color: white;
+  fill: white;
 }
