@@ -632,6 +632,7 @@ img {
 
 .current-page {
   position: relative;
+  display: flex;
 }
 
 .current-page span {
@@ -642,9 +643,9 @@ img {
 .current-page .line {
   position: absolute;
   z-index: 1;
-  left: -5px;
+  left: -5%;
   top: 68%;
-  width: calc(100% + 7px);
+  width: calc(110%);
   height: 6px;
   background-color: #f3b63f;
 }
