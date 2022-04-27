@@ -19,64 +19,77 @@
   <body>
     <div class="background-blue">
       <header class="container-width">
-        <div class="header-logo">
-          <a href="/">
-            <img src="svg/logo-main.svg" />
-          </a>
-        </div>
-        <div class="header-links">
-          <ul>
-            <li>
-              <a href="/">
-                <div class="line"></div>
-                <span>Советник</span>
-              </a>
-            </li>
-            <li>
-              <a class="current-page" href="/">
-                <div class="line"></div>
-                <span>Мой портфель</span>
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <div class="line"></div>
-                <span>Криптовалюта</span>
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <div class="line"></div>
-                <span>Тарифы</span>
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <div class="line"></div>
-                <span>Faq</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="dropdown">
-          <div class="pointer">
-            <input
-              type="text"
-              disabled
-              class="textBox"
-              placeholder="Language"
-            />
+        <div class="container-mobile">
+          <div class="links-menu">
+            <img src="svg/mobile/headermenu.svg" alt="" />
           </div>
-          <div class="option">
-            <div onclick="show(this)">English</div>
-            <div onclick="show(this)">Русский</div>
-            <div class="onload" onclick="show(this)">Хохлятский</div>
-            <div onclick="show(this)">Руся</div>
-            <div onclick="show(this)">Пидор</div>
-            <div onclick="show(this)">Беларуская</div>
+          <div class="main-logo">
+            <img src="svg/logo-main.svg" alt="" />
+          </div>
+          <div class="login-menu-mob">
+            <img src="svg/mobile/headerloginmenu.svg" alt="" />
           </div>
         </div>
-        <!-- <div class="language">
+
+        <div class="container-desktop">
+          <div class="header-logo">
+            <a href="/">
+              <img src="svg/logo-main.svg" />
+            </a>
+          </div>
+          <div class="header-links">
+            <ul>
+              <li>
+                <a href="/">
+                  <div class="line"></div>
+                  <span>Советник</span>
+                </a>
+              </li>
+              <li>
+                <a class="current-page" href="/">
+                  <div class="line"></div>
+                  <span>Мой портфель</span>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <div class="line"></div>
+                  <span>Криптовалюта</span>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <div class="line"></div>
+                  <span>Тарифы</span>
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <div class="line"></div>
+                  <span>Faq</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="pointer">
+              <input
+                type="text"
+                disabled
+                class="textBox"
+                placeholder="Language"
+              />
+            </div>
+            <div class="option">
+              <div onclick="show(this)">English</div>
+              <div onclick="show(this)">Русский</div>
+              <div class="onload" onclick="show(this)">Хохлятский</div>
+              <div onclick="show(this)">Руся</div>
+              <div onclick="show(this)">Пидор</div>
+              <div onclick="show(this)">Беларуская</div>
+            </div>
+          </div>
+          <!-- <div class="language">
           <select name="language" id="language">
             <option value="RU">Русский</option>
             <optgroup>
@@ -91,18 +104,19 @@
             <option value="EN">English</option>
           </select>
         </div> -->
-        <div class="login-menu">
-          <!-- <button class="login-button">
+          <div class="login-menu">
+            <!-- <button class="login-button">
             <img class="login-button-icon" src="svg/person.svg" /><span
               >Вход | регистрация</span
             >
           </button> -->
 
-          <img class="login-button-icon" src="svg/person.svg" />
-          <div class="login-links">
-            <a class="login-link-hover" href="/">Вход</a>
-            |
-            <a class="login-link-hover" href="/">Регистрация</a>
+            <img class="login-button-icon" src="svg/person.svg" />
+            <div class="login-links">
+              <a class="login-link-hover" href="/">Вход</a>
+              |
+              <a class="login-link-hover" href="/">Регистрация</a>
+            </div>
           </div>
         </div>
       </header>
@@ -125,9 +139,11 @@
                   биржи и ММВБ
                 </li>
               </ul>
-              <button class="try-30days-trial">
-                Попробовать 30 дней бесплатно
-              </button>
+              <div>
+                <button class="try-30days-trial">
+                  Попробовать 30 дней бесплатно
+                </button>
+              </div>
             </div>
             <div class="right">
               <img src="svg/huiphone-svg1.svg" />
@@ -398,17 +414,19 @@
               Москва, г. Московский, ул. Атласова д.3, пом.146, +79255427889
             </div>
             <div class="links-left">
-              <a class="linka link-hover" href="/" class=""
-                >Пользовательское соглашение</a
-              ><br />
-              <a class="linka link-hover" href="/" class=""
-                >Оферта регулярных платежей</a
-              >
+              <a class="linka link-hover" href="/" class="">
+                Пользовательское соглашение
+              </a>
+              <br />
+              <a class="linka link-hover" href="/" class="">
+                Оферта регулярных платежей
+              </a>
+              <br />
             </div>
             <div class="links-right">
-              <a class="linka link-hover" href="/" class=""
-                >Политика конфиденциальности</a
-              >
+              <a class="linka link-hover" href="/" class="">
+                Политика конфиденциальности
+              </a>
             </div>
           </div>
         </div>
