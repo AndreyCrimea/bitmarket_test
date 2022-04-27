@@ -8,10 +8,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="lang-menu.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BeatMarket</title>
+    <link rel="icon" href="svg/favicon.svg" type="image/x-icon" />
   </head>
 
   <body>
@@ -24,25 +26,84 @@
         </div>
         <div class="header-links">
           <ul>
-            <li><a href="Советник">Советник</a></li>
-            <li><a href="Мой портфель">Мой портфель</a></li>
-            <li><a href="Криптовалюта">Криптовалюта</a></li>
-            <li><a href="Тарифы">Тарифы</a></li>
-            <li><a href="Faq">Faq</a></li>
+            <li>
+              <a href="/">
+                <div class="line"></div>
+                <span>Советник</span>
+              </a>
+            </li>
+            <li>
+              <a class="current-page" href="/">
+                <div class="line"></div>
+                <span>Мой портфель</span>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <div class="line"></div>
+                <span>Криптовалюта</span>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <div class="line"></div>
+                <span>Тарифы</span>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <div class="line"></div>
+                <span>Faq</span>
+              </a>
+            </li>
           </ul>
         </div>
-        <div class="language">
+        <div class="dropdown">
+          <div class="pointer">
+            <input
+              type="text"
+              disabled
+              class="textBox"
+              placeholder="Language"
+            />
+          </div>
+          <div class="option">
+            <div onclick="show(this)">English</div>
+            <div onclick="show(this)">Русский</div>
+            <div class="onload" onclick="show(this)">Хохлятский</div>
+            <div onclick="show(this)">Руся</div>
+            <div onclick="show(this)">Пидор</div>
+            <div onclick="show(this)">Беларуская</div>
+          </div>
+        </div>
+        <!-- <div class="language">
           <select name="language" id="language">
             <option value="RU">Русский</option>
+            <optgroup>
+              <option value="EN">English</option>
+              <option value="EN">English</option>
+              <option value="EN">English</option>
+              <option value="EN">English</option>
+              <option value="EN">English</option>
+            </optgroup>
+            <option value="EN">English</option>
+            <option value="EN">English</option>
             <option value="EN">English</option>
           </select>
-        </div>
+        </div> -->
         <div class="login-menu">
-          <button class="login-button">
+          <!-- <button class="login-button">
             <img class="login-button-icon" src="svg/person.svg" /><span
               >Вход | регистрация</span
             >
-          </button>
+          </button> -->
+
+          <img class="login-button-icon" src="svg/person.svg" />
+          <div class="login-links">
+            <a class="login-link-hover" href="/">Вход</a>
+            |
+            <a class="login-link-hover" href="/">Регистрация</a>
+          </div>
         </div>
       </header>
     </div>
@@ -300,7 +361,7 @@
                     />
                   </svg>
 
-                  <span>подписатся на канал</span>
+                  <span>Подписаться на канал</span>
                 </button>
               </div>
             </div>
@@ -353,5 +414,32 @@
         </div>
       </div>
     </footer>
+    <script>
+      function reset_select() {
+        var a = document.querySelector(".selected");
+        if (a !== null) {
+          a.classList.remove("selected");
+          // console.log(a);
+        }
+      }
+
+      function show(text) {
+        // console.log(text);
+        reset_select();
+        text.classList.add("selected");
+        document.querySelector(".textBox").value = text.textContent;
+      }
+
+      let dropdown = document.querySelector(".dropdown");
+      dropdown.onclick = function () {
+        dropdown.classList.toggle("active");
+      };
+
+      reset_select();
+      dropdown.addEventListener(
+        "load",
+        show(document.querySelector(".onload"))
+      );
+    </script>
   </body>
 </html>

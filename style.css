@@ -54,15 +54,12 @@ header {
 .header-links ul {
   list-style: none;
   display: flex;
-  padding-top: 12px;
+  padding-top: 17px;
+  gap: 28px;
 }
 
 .header-links li {
-  margin-right: 28px;
-}
-
-.header-links li:last-child {
-  margin-right: 40px;
+  /* margin-right: 28px; */
 }
 
 .header-links li a {
@@ -86,10 +83,39 @@ header {
 
   width: 92px;
   padding: 0;
-  margin-top: 12px;
+  margin-top: 17px;
   margin-right: 16px;
   background: rgba(0, 0, 0, 0);
   border-width: 0px;
+}
+
+.login-menu {
+  display: flex;
+
+  padding: 17px 25px;
+  background-color: white;
+  gap: 10px;
+
+  border-radius: 8px;
+  box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
+  align-items: center;
+}
+
+.login-menu .login-links {
+  font-weight: 600;
+  color: #3e54d8;
+  /* text-decoration: none; */
+}
+
+.login-link-hover,
+.login-link-hover:visited {
+  color: #3e54d8;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.login-link-hover:hover {
+  color: #1b2d9d;
 }
 
 .login-menu .login-button {
@@ -602,4 +628,23 @@ footer .links-right {
 
 img {
   max-width: 100%;
+}
+
+.current-page {
+  position: relative;
+}
+
+.current-page span {
+  position: relative;
+  z-index: 2;
+}
+
+.current-page .line {
+  position: absolute;
+  z-index: 1;
+  left: -5px;
+  top: 68%;
+  width: calc(100% + 7px);
+  height: 6px;
+  background-color: #f3b63f;
 }
