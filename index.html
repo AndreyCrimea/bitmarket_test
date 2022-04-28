@@ -34,10 +34,11 @@
         <div class="container-desktop">
           <div class="header-logo">
             <div onclick="show_links()" class="links-menu">
-              <img src="svg/mobile/headermenu.svg" alt="" />
+              <img class="xmenu" src="svg/mobile/headermenu.svg" alt="" />
+              <img class="xcros hide" src="svg/mobile/headerxcros.svg" alt="" />
             </div>
             <div class="main-logo">
-              <img src="svg/logo-main.svg" alt="" />
+              <a href="/"><img src="svg/logo-main.svg" alt="" /></a>
             </div>
             <div class="login-menu-mob">
               <img src="svg/mobile/headerloginmenu.svg" alt="" />
@@ -467,12 +468,18 @@
           document.querySelector(".header-bg").classList.add("full-height");
           document.querySelector(".main-alt").classList.remove("hide");
           document.querySelector(".header-links").classList.add("show");
+
+          document.querySelector(".xmenu").classList.add("hide");
+          document.querySelector(".xcros").classList.remove("hide");
         } else {
           document.querySelector(".main").classList.remove("hide");
           document.querySelector(".footer").classList.remove("hide");
           document.querySelector(".header-bg").classList.remove("full-height");
           document.querySelector(".main-alt").classList.add("hide");
           document.querySelector(".header-links").classList.remove("show");
+
+          document.querySelector(".xmenu").classList.remove("hide");
+          document.querySelector(".xcros").classList.add("hide");
         }
       }
 

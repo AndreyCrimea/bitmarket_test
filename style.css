@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
 
-  /* -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: none;
-  -ms-text-size-adjust: 100%; */
+  -ms-text-size-adjust: 100%;
 }
 
 body,
@@ -379,7 +379,7 @@ html {
     /* position: absolute; */
     position: absolute;
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 40px !important;
   }
 
@@ -395,6 +395,7 @@ html {
   .header .left > div {
     width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   .try-30days-trial {
@@ -789,6 +790,7 @@ html {
   padding-left: 20px;
   font-size: 18px;
   margin-bottom: 17px;
+  line-height: 150%;
 }
 
 .header .left li::before {
@@ -812,7 +814,9 @@ html {
 .try-30days-trial {
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  padding: 29px 52px;
+  width: 420px;
+  max-width: 100%;
+  padding: 29px 0px;
   margin-bottom: 100px;
   background-color: #3e54d8;
   border-radius: 8px;
