@@ -259,6 +259,10 @@ html {
     font-size: 16px;
     line-height: 25.6px;
   }
+
+  .dropdown.active .option {
+    display: block;
+  }
 }
 
 /* 
@@ -665,6 +669,31 @@ html {
 
   .dropdown.show-right-z .option div {
     padding-left: 14px;
+  }
+
+  .dropdown.active .option {
+    display: grid;
+    overflow-y: auto;
+  }
+
+  .dropdown.active .horis-line-scroll {
+    height: 30px;
+    width: calc(159px + 0.4%);
+    position: absolute;
+    right: -16px;
+    background-color: white;
+    top: 20px;
+  }
+
+  .dropdown.active .horis-line-scroll::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    left: 25px;
+    height: 1px;
+    background: #d3e3ff;
+    z-index: 20;
+    top: 50%;
   }
 }
 
