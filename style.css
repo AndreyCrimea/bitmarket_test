@@ -638,6 +638,34 @@ html {
     line-height: 25.6px;
     text-align: center;
   }
+
+  .dropdown.show-right-z .option {
+    border: none !important;
+    width: calc(159px + 0.4%);
+    right: -16px;
+    top: 40px;
+    padding-bottom: 10px;
+    max-height: 260px;
+    overflow-y: auto;
+
+    justify-content: space-around;
+  }
+
+  /* .dropdown.show-right-z .option::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 1px;
+    top: 7px;
+    left: 25px;
+    background: #d3e3ff;
+    z-index: 10;
+    top: 16px;
+  } */
+
+  .dropdown.show-right-z .option div {
+    padding-left: 14px;
+  }
 }
 
 /* 
@@ -733,6 +761,9 @@ html {
 
   border-radius: 8px;
   box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
+}
+
+header .login-menu {
   align-items: center;
 }
 
@@ -911,7 +942,7 @@ html {
 }
 
 .cards-min .card-min-vertical {
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .cards-min .text h1 {
@@ -1122,4 +1153,46 @@ body {
 .show li span {
   font-size: 28px;
   line-height: 121%;
+}
+
+.login-menu.show-right-z {
+  display: flex !important;
+  position: absolute !important;
+  right: 0%;
+  align-items: unset;
+  align-items: top !important;
+  top: 95px;
+  z-index: 10;
+  height: 90%;
+}
+
+.show-right-z .login-links {
+  font-weight: 500 !important;
+}
+
+.login-menu.show-right-z img {
+  display: none;
+}
+
+.login-menu.show-right-z .vert-div {
+  display: none;
+}
+
+.login-menu.show-right-z .login-links {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+
+.dropdown.show-right-z {
+  display: flex;
+  position: absolute !important;
+  right: 0%;
+  z-index: 11;
+  bottom: -100px;
+}
+
+.dropdown.show-right-z input {
+  text-align: left;
+  left: -8px;
 }

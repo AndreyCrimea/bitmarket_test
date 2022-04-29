@@ -12,6 +12,7 @@
   font-weight: 500;
   background-color: transparent;
   color: #3e54d8;
+  opacity: 1;
 }
 
 /* body {
@@ -102,7 +103,28 @@
 }
 
 .dropdown.active .option {
-  display: block;
+  display: grid;
+  overflow-y: auto;
+}
+
+.dropdown.active .horis-line-scroll {
+  height: 30px;
+  width: calc(159px + 0.4%);
+  position: absolute;
+  right: -16px;
+  background-color: white;
+  top: 20px;
+}
+
+.dropdown.active .horis-line-scroll::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  left: 25px;
+  height: 1px;
+  background: #d3e3ff;
+  z-index: 20;
+  top: 50%;
 }
 
 .dropdown .option div {

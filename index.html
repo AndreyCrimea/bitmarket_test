@@ -40,7 +40,7 @@
             <div class="main-logo">
               <a href="/"><img src="svg/logo-main.svg" alt="" /></a>
             </div>
-            <div class="login-menu-mob">
+            <div onclick="show_menu()" class="login-menu-mob">
               <img src="svg/mobile/headerloginmenu.svg" alt="" />
               <!-- <div class="dropdown">
                 <div class="pointer">
@@ -100,12 +100,19 @@
                 placeholder="Language"
               />
             </div>
+            <div class="horis-line-scroll"></div>
             <div class="option">
               <div onclick="show(this)">English</div>
               <div onclick="show(this)">Русский</div>
               <div class="onload" onclick="show(this)">Хохлятский</div>
               <div onclick="show(this)">Руся</div>
               <div onclick="show(this)">Пидор</div>
+              <div onclick="show(this)">Беларуская</div>
+              <div onclick="show(this)">Беларуская</div>
+              <div onclick="show(this)">Беларуская</div>
+              <div onclick="show(this)">Беларуская</div>
+              <div onclick="show(this)">Беларуская</div>
+              <div onclick="show(this)">Беларуская</div>
               <div onclick="show(this)">Беларуская</div>
             </div>
           </div>
@@ -134,7 +141,7 @@
             <img class="login-button-icon" src="svg/person.svg" />
             <div class="login-links">
               <a class="login-link-hover" href="/">Вход</a>
-              |
+              <span class="vert-div">|</span>
               <a class="login-link-hover" href="/">Регистрация</a>
             </div>
           </div>
@@ -460,6 +467,7 @@
     </footer>
     <script>
       let show_links_bool = false;
+      let show_menu_bool = false;
 
       function switch_elems() {
         if (show_links_bool == true) {
@@ -483,9 +491,36 @@
         }
       }
 
+      function switch_menu() {
+        if (show_menu_bool == true) {
+          document.querySelector(".login-menu").classList.add("show-right-z");
+          document.querySelector(".dropdown").classList.add("show-right-z");
+        } else {
+          document
+            .querySelector(".login-menu")
+            .classList.remove("show-right-z");
+          document.querySelector(".dropdown").classList.remove("show-right-z");
+        }
+      }
+
+      function show_menu() {
+        show_menu_bool = !show_menu_bool;
+        show_links_bool = false;
+
+        if (show_links_bool == false) {
+          switch_elems();
+        }
+
+        switch_menu();
+      }
+
       function show_links() {
         show_links_bool = !show_links_bool;
-        console.log(show_links_bool);
+        show_menu_bool = false;
+
+        if (show_menu_bool == false) {
+          switch_menu();
+        }
 
         switch_elems();
       }
@@ -519,6 +554,10 @@
       function reportWindowSize() {
         if (window.innerWidth >= 1200 && show_links_bool == true) {
           show_links();
+        }
+
+        if (window.innerWidth >= 1200 && show_menu_bool == true) {
+          show_menu();
         }
 
         // if (window.innerWidth < 1200 && show_links_bool == false) {
