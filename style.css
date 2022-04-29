@@ -292,6 +292,10 @@ html {
   .margin-bot {
     margin-bottom: 0;
   }
+
+  .card-vertical img {
+    margin-right: auto !important;
+  }
 }
 
 /* @media only screen and (max-width: 1199px) {
